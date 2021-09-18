@@ -1,0 +1,33 @@
+.wrapper {
+    width: 100%;
+}
+
+.wrapper-items{
+    padding-right: 5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    height: 100%;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#nameLogo {
+    height: 50px;
+}
+
+#name {
+    color: rgb(255, 255, 255);
+}
+
+#roles {
+    color: rgb(255, 0, 0);
+}
+
+.textString {
+    
+    vertical-align: center;
+}
