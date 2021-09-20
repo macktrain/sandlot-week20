@@ -1,8 +1,7 @@
 import React, { useState , useEffect } from 'react'
-import Header from '../components/Header'
-import MySlider from '../components/MySlider';
-const { red, blue, green } = require('@material-ui/core/colors');
-const Button = require('@material-ui/core/Button').default;
+import Carousel from 'react-elastic-carousel';
+import Item from "../components/Item";
+import "../App.css";
 
 const Home = () => {
     const [role, setRole] = useState(0);
@@ -12,6 +11,18 @@ const Home = () => {
         'Project Manager',
         'People Manager'
     ];
+
+    state = {
+        items: [
+          {id: 1, title: 'item #1'},
+          {id: 2, title: 'item #2'},
+          {id: 3, title: 'item #3'},
+          {id: 4, title: 'item #4'},
+          {id: 5, title: 'item #5'}
+        ]
+    }
+
+    const { items } = this.state;
 
     return (
         <div class='wrapper'>
@@ -31,7 +42,11 @@ const Home = () => {
                     </span>
                 </p>
             </div>
-            {/* <MySlider/> */}
+            <div>
+                <Carousel>
+                    {items.map(item => <div key={item.id}>{item.title}</div>)}
+                </Carousel>
+            </div>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import Header from '../components/Header'
 const About = () => {
     return (
         <div>
-            About
+            About Me
         </div>
     )
 }

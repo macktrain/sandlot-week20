@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header'
+import Footer from './components/Footer'
 import {BrowserRouter, Route} from 'react-router-dom'
 import Home from './views/Home'
 import About from './views/About'
@@ -19,6 +20,7 @@ function App() {
           <Route path='/contact' component={Contact} />
           <Route path='/resume' component={Resume} />
       </Container>
+      <Footer/>
     </BrowserRouter>
   );
 }
