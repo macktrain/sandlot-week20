@@ -1,5 +1,13 @@
 .wrapper {
     width: 100%;
+    padding-top: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-image: '../images/Cartoonizer-befunky-CrossHatchDLX.jpg';
 }
 
 .wrapper-items{
@@ -9,10 +17,6 @@
 .main {
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
-    height: 100%;
-    align-items: center; 
-    justify-content: center; 
 }
 
 #nameLogo {
@@ -25,15 +29,73 @@
 
 #roles {
     color: rgb(255, 0, 0);
+    font-size: 24px;
 }
 
-.textString {
-    
-  padding: 15px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+.marqueeContainer {
+    width: 20em;
+    height: 2em;
+    margin: 2em auto;
+    overflow: hidden;
+    background: #000000;
+}
+
+.slider {
+    top: 1em;
+    position: relative;
+    box-sizing: border-box;
+    animation: slider 15s linear infinite;
+    list-style-type: none;
+    text-align: center;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slider {
+    0%   { top:   10em }
+    100% { top: -14em }
+}
+
+.blur .slider {
+  	margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+}
+
+.blur:before, .blur::before,
+.blur:after,  .blur::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2em;
+}
+
+.blur:after, .blur::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.blur:before, .blur::before {
+    top: 0;
+}
+
+p {
+  font-family: helvetica, arial, sans serif;
+}
+
+#openingNote {
+    margin-top: 2%;
+}
+
+#addBackground {
+    display: flex;
+    justify-content: center;
+}
+
+#bodyImg {
+    height: 150px;
 }

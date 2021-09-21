@@ -1,6 +1,5 @@
 import React, { useState , useEffect } from 'react'
-import Carousel from 'react-elastic-carousel';
-import Item from "../components/Item";
+import bodyImg from './cartoonbody.gif'
 import "../App.css";
 
 const Home = () => {
@@ -8,26 +7,16 @@ const Home = () => {
     
     const roles = [ 
         'Full Stack Web Engineer',
-        'Project Manager',
+        'Project Manager',        
         'People Manager'
     ];
 
-    state = {
-        items: [
-          {id: 1, title: 'item #1'},
-          {id: 2, title: 'item #2'},
-          {id: 3, title: 'item #3'},
-          {id: 4, title: 'item #4'},
-          {id: 5, title: 'item #5'}
-        ]
-    }
-
-    const { items } = this.state;
+    const [items, setItems] = useState([1, 2, 3, 4, 5]);
 
     return (
         <div class='wrapper'>
-            <div class="main">
-                <p class="textString">
+            <div>
+                <div>
                     <span id='intro' class='wrapper-items'>
                         Hello, my name is 
                     </span>
@@ -37,15 +26,26 @@ const Home = () => {
                     <span class='wrapper-items'>
                         and I am a 
                     </span>
-                    <span id='roles' class='wrapper-items'>
-                        { roles[role] }
-                    </span>
-                </p>
+                </div>
+                <span id='roles'>
+                    { roles[role] }
+                </span>
             </div>
-            <div>
-                <Carousel>
-                    {items.map(item => <div key={item.id}>{item.title}</div>)}
-                </Carousel>
+            <div id='addBackground'>
+                <img id='bodyImg' src={bodyImg} />
+                <div id ='openingNote'>
+                    Who is also 
+                </div>
+                <div class="marqueeContainer blur">
+                    <ul class="slider">
+                        <li><p> an Innovator</p></li>
+                        <li><p> a Strong Comunicator</p></li>
+                        <li><p> a Project Manager</p></li>
+                        <li><p> a Scrum Master</p></li>
+                        <li><p> a Scrum Product Owner</p></li>
+                        <li><p> a Technology Leader</p></li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
