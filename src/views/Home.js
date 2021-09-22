@@ -1,6 +1,8 @@
 import React, { useState , useEffect } from 'react'
 import bodyImg from './cartoonbody.gif'
 import "../App.css";
+import { green } from '@material-ui/core/colors';
+import { ArrowRight } from '@mui/icons-material';
 
 const Home = () => {
 
@@ -28,7 +30,12 @@ const Home = () => {
                 </div>
                 <div id='addBackground'>
                     <div id ='openingNote'>
-                        Who is also 
+                        <div>
+                            Who is also 
+                        </div>
+                        <div id='plus'>
+                            &#x2B;
+                        </div>
                     </div>
                     <div class="otherRoles">
                         <div align="left" class='individualRole'> an Innovator</div>
@@ -38,6 +45,18 @@ const Home = () => {
                         <div align="left" class='individualRole'> a Scrum Product Owner</div>
                         <div align="left" class='individualRole'> a Technology Leader</div>
                     </div>
+                </div>
+                <div id='equals'>
+                    <hr
+                        style={{
+                            color: "green",
+                            height: 3,
+                            width: 200
+                        }}
+                    />
+                </div>
+                <div id='result'>
+                    Great Teammate!
                 </div>
             </div>
         </div>
