@@ -11,13 +11,6 @@ const breakPoints = [
 ];
 
 const Portfolio = () => {
-    const [role, setRole] = useState(0);
-    
-    const roles = [ 
-        'Full Stack Web Engineer',
-        'Project Manager',
-        'People Manager'
-    ];
 
     const [items, setItems] = useState([1, 2, 3, 4, 5]);
 

@@ -1,4 +1,7 @@
 .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     width: 100%;
     padding-top: 100px;
     position: absolute;
@@ -7,11 +10,12 @@
     -ms-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    background-image: '../images/Cartoonizer-befunky-CrossHatchDLX.jpg';
 }
 
 .wrapper-items{
+    display: flex;
     padding-right: 5px;
+    font-size: 18px;
 }
 
 .main {
@@ -27,75 +31,38 @@
     color: rgb(255, 255, 255);
 }
 
-#roles {
+#role {
     color: rgb(255, 0, 0);
-    font-size: 24px;
+    font-size: 25px;
 }
 
-.marqueeContainer {
-    width: 20em;
-    height: 2em;
-    margin: 2em auto;
-    overflow: hidden;
-    background: #000000;
-}
-
-.slider {
-    top: 1em;
-    position: relative;
-    box-sizing: border-box;
-    animation: slider 15s linear infinite;
-    list-style-type: none;
-    text-align: center;
-}
-
-.slider:hover {
-    animation-play-state: paused;
-}
-
-@keyframes slider {
-    0%   { top:   10em }
-    100% { top: -14em }
-}
-
-.blur .slider {
-  	margin: 0;
-    padding: 0 1em;
-    line-height: 1.5em;
-}
-
-.blur:before, .blur::before,
-.blur:after,  .blur::after {
-    left: 0;
-    z-index: 1;
-    content: '';
-    position: absolute;
-    width: 100%; 
-    height: 2em;
-}
-
-.blur:after, .blur::after {
-    bottom: 0;
-    transform: rotate(180deg);
-}
-
-.blur:before, .blur::before {
-    top: 0;
-}
-
-p {
-  font-family: helvetica, arial, sans serif;
-}
-
-#openingNote {
-    margin-top: 2%;
+#intro, #addBackground {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #addBackground {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 #bodyImg {
     height: 150px;
+}
+
+.otherRoles {
+    display: flex;
+    flex-direction: column;
+}
+
+#openingNote {
+    display: flex;
+    margin-top: 0px;
+    margin-right: 15px;
+    font-style: italic;
 }
