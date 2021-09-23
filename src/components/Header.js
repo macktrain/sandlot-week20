@@ -1,14 +1,14 @@
 import React from 'react'
 import nameLogo from './name.png'
-import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap"
+import {Navbar, Container, Nav} from "react-bootstrap"
 import {LinkContainer} from "react-router-bootstrap"
 
 const Header = (props) => {
     //Everything within the return is jsx and vars need {} for a jsx variable and expressions (.map, if-then, etc)
     return (
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" expand="sm" sticky="top">
+        <Navbar collapseOnSelect bg="dark" variant="dark" expand="sm" sticky="top">
             <Container>
-                <Navbar.Brand><img id='nameLogo' src={nameLogo} /></Navbar.Brand>
+                <Navbar.Brand><img id='nameLogo' src={nameLogo} alt='Signature' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto nav-links-custom">

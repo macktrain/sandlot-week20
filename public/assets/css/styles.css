@@ -18,6 +18,12 @@
     font-size: 18px;
 }
 
+.portfolioRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -96,4 +102,13 @@
 #equals {
     margin-left: 25%;
     vertical-align: top;
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: row;
+}
+
+#thanksTo {
+    font-size: 10px;
 }

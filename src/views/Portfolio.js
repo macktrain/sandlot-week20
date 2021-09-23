@@ -1,97 +1,135 @@
-import React from 'react';
-import { Carousel } from 'react-carousel-minimal';
-import "../App.css";
+import React from 'react'
+import agartha from './images/agartha.gif'
+import budget from './images/budget.gif'
+import weather from './images/weather.gif'
+import pet from './images/petfinder.gif'
+import portfolioImg from './images/portfolio.gif'
+import blog from './images/blog.gif'
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardLink, MDBListGroup, MDBListGroupItem } from 'mdb-react-ui-kit';
 
 const Portfolio = () => {
-    const data = [
-       {
-         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-         caption: `<div>
-                     San Francisco
-                     <br/>
-                     Next line
-                   </div>`
-       },
-       {
-         image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-         caption: "Scotland"
-       },
-       {
-         image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-         caption: "Darjeeling"
-       },
-       {
-         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-         caption: "San Francisco"
-       },
-       {
-         image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-         caption: "Scotland"
-       },
-       {
-         image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-         caption: "Darjeeling"
-       },
-       {
-         image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
-         caption: "San Francisco"
-       },
-       {
-         image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-         caption: "Scotland"
-       },
-       {
-         image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-         caption: "Darjeeling"
-       }
-     ];
-   
-     const captionStyle = {
-       fontSize: '2em',
-       fontWeight: 'bold',
-     }
-     const slideNumberStyle = {
-       fontSize: '20px',
-       fontWeight: 'bold',
-     }
-
-     return (
-        <div className="App">
-          <div style={{ textAlign: "center" }}>
-            <h2>React Carousel Minimal</h2>
-            <p>Easy to use, responsive and customizable carousel component for React Projects.</p>
-            <div style={{
-              padding: "0 20px"
-            }}>
-              <Carousel
-                data={data}
-                time={2000}
-                width="850px"
-                height="500px"
-                captionStyle={captionStyle}
-                radius="10px"
-                slideNumber={true}
-                slideNumberStyle={slideNumberStyle}
-                captionPosition="bottom"
-                automatic={true}
-                dots={true}
-                pauseIconColor="white"
-                pauseIconSize="40px"
-                slideBackgroundColor="darkgrey"
-                slideImageFit="cover"
-                thumbnails={true}
-                thumbnailWidth="100px"
-                style={{
-                  textAlign: "center",
-                  maxWidth: "850px",
-                  maxHeight: "500px",
-                  margin: "40px auto",
-                }}
-              />
+    return (
+            <div>
+                <div class='portfolioRow' id='1'>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={agartha} />
+                            <MDBCardBody>
+                                <MDBCardTitle>Agarthan Adventures</MDBCardTitle>
+                                <MDBCardText>
+                                    MVP role player text adventure game that allows a user to create a user and fight enemies!
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>NodeJS, Express, MySQL, HTML/CSS/JS</MDBListGroupItem>
+                                <MDBListGroupItem>Team Project where I built out server, api end points, routers and front end.</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://agarthan-adventures.herokuapp.com/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/Agarthan-Adventures'  target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={budget} />
+                            <MDBCardBody>
+                                <MDBCardTitle>On/Offline Budget Tool</MDBCardTitle>
+                                <MDBCardText>
+                                Budget tracker that allows user to manage expenses while online, but will also track expenses while offline.
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>NodeJS, Express, Cloud MongoDB, IndexedDB</MDBListGroupItem>
+                                <MDBListGroupItem>Individual Project</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://leebudgetapp.herokuapp.com/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/sandlot-week19' target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={weather} />
+                            <MDBCardBody>
+                                <MDBCardTitle>Weather App</MDBCardTitle>
+                                <MDBCardText>
+                                A weather app that leverages  a 3rd party API, allowing us to see weather forecasts in the US while keeping history.
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>HTML/CSS/JS, Openweather API, </MDBListGroupItem>
+                                <MDBListGroupItem>Individual Project</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://macktrain.github.io/sandlot-week6/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/sandlot-week6' target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                </div>
+                <div class='portfolioRow' id='2'>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={pet} />
+                            <MDBCardBody>
+                                <MDBCardTitle>PetHarmony</MDBCardTitle>
+                                <MDBCardText>
+                                    App that allows a user to find a US-based pet and get directions to that pet.
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>HTML/CSS/JS, GoogleMaps API, PetFinder API</MDBListGroupItem>
+                                <MDBListGroupItem>Team Project where I built out backend and API integrations.</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://macktrain.github.io/teamProject/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/sandlot-week12'  target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={portfolioImg} />
+                            <MDBCardBody>
+                                <MDBCardTitle>Personal Portfolio</MDBCardTitle>
+                                <MDBCardText>
+                                Personal portfolio explaining who I am and my skills.  A user will also be able to contact me and review my resume at their leisure.
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>ReactJS</MDBListGroupItem>
+                                <MDBListGroupItem>Individual Project</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://leebudgetapp.herokuapp.com/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/sandlot-week19' target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                    <div class='project'>
+                        <MDBCard style={{ width: '18rem' }}>
+                            <MDBCardImage position='top' alt='...' src={blog} />
+                            <MDBCardBody>
+                                <MDBCardTitle>Blog Site</MDBCardTitle>
+                                <MDBCardText>
+                                   Everything necessary to create a social community through a blog site is available here.
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <MDBListGroup flush>
+                                <MDBListGroupItem>HTML/CSS/JS, Handlebars, Node.js, MySQL/JAWSDB</MDBListGroupItem>
+                                <MDBListGroupItem>Individual Project</MDBListGroupItem>
+                            </MDBListGroup>
+                            <MDBCardBody>
+                                <MDBCardLink href='https://leemacklinblog.herokuapp.com/' target="_blank" rel="noopener noreferrer">Live link</MDBCardLink>
+                                <MDBCardLink href='https://github.com/macktrain/sandlot-week14' target="_blank" rel="noopener noreferrer">Github</MDBCardLink>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      );
+    )
 }
 
 export default Portfolio

@@ -1,15 +1,13 @@
-import React, { useState , useEffect } from 'react'
-import bodyImg from './cartoonbody.gif'
+import React from 'react'
+import bodyImg from './images/cartoonbody.gif'
 import "../App.css";
-import { green } from '@material-ui/core/colors';
-import { ArrowRight } from '@mui/icons-material';
 
 const Home = () => {
 
     return (
         <div class='wrapper' >
             <div id='leftSide'>
-                <img id='bodyImg' src={bodyImg} />
+                <img id='bodyImg' src={bodyImg} alt='Cartoon Lee' />
             </div>
             <div id='rightside'>
                 <div>
