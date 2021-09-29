@@ -3,14 +3,15 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div id='about'>
+        <div id='about'  align='left'>
+            <br/>
             <div id='aboutIntro'>
                 As an experienced development professional with 10 years of development experience, 15 years leadership/management and 24 years of overall IT experience, 
                 I have learned the art of delivering results in a collaborative manner. Being a team player who encourages innovation, driving for "next level" solutions 
                 and places value on the individual is key to creating an environment conducive to productivity and is key to building up a team that drives for best of 
                 class business value in a timely and cost effective manner.  While my resume will show the following experience:
-            </div>
-            <div id='aboutHighlights'>
+                <br/>
+                <br/>
                 <ul>
                     <li>10 years – Application Development.</li>
                     <li>15 years – Technology Leadership.</li>
