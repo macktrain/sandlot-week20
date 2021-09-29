@@ -1,4 +1,5 @@
 import React from 'react'
+import resume from './images/resume.gif'
 
 const Resume = () => {
     return (
@@ -54,6 +55,14 @@ const Resume = () => {
                             </li>
                         </ul>
                 </ul>
+            </div>
+            <div>
+                Downloadable PDF of entire resume here:  
+                <span> 
+                    <a href={ resume } download >
+                        <img src={ resume } alt="resume" id='resumeImg' />
+                    </a>
+                </span>
             </div>
         </div>
     )
