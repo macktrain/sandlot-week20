@@ -10,6 +10,8 @@ This would be a strong equivalent of a cover letter should I provide one.  It te
 
 Here we give the visitor the opportunity to review some of my past work while also allowing them the opportunity to visit the live links of that work to "touch" them and also provide a link to allow them to visit the code bases.
 
+Here is the link to it:  https://macktrain.github.io/sandlot-week20/
+
 ## Contact
 
 If a visitor would like to contact me, then can use the contact form (which still needs a "mailto" added to it) or reach out to me via one of the methods provided on the page:  email or phone call (Text is best).
