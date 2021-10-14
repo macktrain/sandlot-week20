@@ -59,7 +59,7 @@ const Resume = () => {
             <div>
                 Downloadable PDF of entire resume here:  
                 <span> 
-                    <a href={ resume } download >
+                    <a href="/sandlot-week20/pdf/resume.pdf" download >
                         <img src={ resume } alt="resume" id='resumeImg' />
                     </a>
                 </span>
