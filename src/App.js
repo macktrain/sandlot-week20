@@ -11,7 +11,7 @@ import {Container} from 'react-bootstrap'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/sandlot-week20'>
       <Header/>
       <Container className="App">
           <Route path='/' component ={Home} exact/>
